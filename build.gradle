@@ -17,11 +17,19 @@ repositories {
 
 apply plugin: 'javafx-gradle-plugin'
 
-
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["src/main/java"]
+            includes = ["**/*.*"]
+        }
+    }
+}
 jfx {
     // minimal requirement for jfxJar-task
-    mainClass = 'full.qualified.nameOf.TheMainClass'
+    mainClass = 'smartadb.Main'
 
     // minimal requirement for jfxNative-task
     vendor = 'SmartADB'
+    //additionalAppResources = "./src/main/resources"
 }

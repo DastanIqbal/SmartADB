@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SmartADB.iml" filepath="$PROJECT_DIR$/SmartADB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SmartADB.iml" filepath="$PROJECT_DIR$/.idea/modules/SmartADB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SmartADB_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SmartADB_main.iml" group="SmartADB" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SmartADB_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SmartADB_test.iml" group="SmartADB" />
     </modules>
   </component>
 </project>
