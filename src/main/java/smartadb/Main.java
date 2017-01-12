@@ -25,11 +25,13 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
-        FXMLLoader loader=new FXMLLoader();
-        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("main.fxml"));
+        MainController mainController = new MainController();
+        loader.setController(mainController);
         primaryStage.setTitle("SmartADB");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(loader.load(), 800, 400));
         primaryStage.show();
+        mainController.setUp();
     }
 
 

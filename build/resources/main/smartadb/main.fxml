@@ -10,7 +10,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
             prefWidth="600.0" stylesheets="/smartadb/main.css" xmlns="http://javafx.com/javafx/8.0.112"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="smartadb.MainController">
+            xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <SplitPane dividerPositions="0.298" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0"
                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -44,6 +44,7 @@
                                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
                             </padding>
                             <children>
+                                <Button fx:id="btnrefresh" mnemonicParsing="false" text="Refresh"/>
                                 <Button fx:id="btnstartserver" contentDisplay="TEXT_ONLY" mnemonicParsing="false" text="Start Server"/>
                                 <Button fx:id="btnkillserver" alignment="BOTTOM_RIGHT" contentDisplay="CENTER" mnemonicParsing="false"
                                         text="Kill Server"/>
