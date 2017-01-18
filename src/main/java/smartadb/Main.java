@@ -29,6 +29,7 @@ public class Main extends Application {
         MainController mainController = new MainController();
         loader.setController(mainController);
         primaryStage.setTitle("SmartADB");
+        primaryStage.setResizable(false);
         primaryStage.setScene(new Scene(loader.load(), 800, 400));
         primaryStage.show();
         mainController.setUp();
