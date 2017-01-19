@@ -26,10 +26,84 @@ sourceSets {
     }
 }
 jfx {
-    // minimal requirement for jfxJar-task
+    verbose = true
     mainClass = 'smartadb.Main'
+    jfxAppOutputDir = "build/jfx/app"
+    jfxMainAppJarName = "smartadb-jfx.jar"
+    deployDir = "src/main/deploy"
+    useEnvironmentRelativeExecutables = true
 
-    // minimal requirement for jfxNative-task
+    // gradle jfxJar
+    css2bin = true
+    preLoader = null // String
+    updateExistingJar = true
+    allPermissions = false
+    manifestAttributes = null // Map<String, String>
+    addPackagerJar = true
+    copyAdditionalAppResourcesToJar = true
+
+    // gradle jfxNative
+    identifier = null
+    // String - setting this for windows-bundlers makes it possible to generate upgradeable installers (using same GUID)
     vendor = 'SmartADB'
-    //additionalAppResources = "./src/main/resources"
+    nativeOutputDir = "build/jfx/native"
+    bundler = "ALL"
+    // set this to some specific, if your don't want all bundlers running, examples "windows.app", "jnlp", ...
+    jvmProperties = null // Map<String, String>
+    jvmArgs = null // List<String>
+    userJvmArgs = null // Map<String, String>
+    launcherArguments = null // List<String>
+    nativeReleaseVersion = "3.0"
+    needShortcut = true
+    needMenu = true
+//    bundleArguments = [
+//            // dont bundle JRE (not recommended, but increases build-size/-speed)
+//            //runtime: '/usr/lib/jvm/java-8-openjdk-amd64/jre/'
+//    ]
+    appName = "SmartADB" // this is used for files below "src/main/deploy", e.g. "src/main/deploy/windows/project.ico"
+    additionalBundlerResources = null
+    // path to some additional resources for the bundlers when creating application-bundle
+    additionalAppResources = null // path to some additional resources when creating application-bundle
+    //secondaryLaunchers = [[appName: "Smart ADB"], [appName: "Smart adb"]]
+    fileAssociations = null // List<Map<String, Object>>
+    noBlobSigning = false // when using bundler "jnlp", you can choose to NOT use blob signing
+    customBundlers = null // List<String>
+    //failOnError = false
+    //onlyCustomBundlers = false
+    //skipJNLP = true
+
+//    skipNativeLauncherWorkaround124 = false
+//    skipNativeLauncherWorkaround167 = false
+//    skipNativeLauncherWorkaround205 = false
+//    skipJNLPRessourcePathWorkaround182 = false
+//    skipSigningJarFilesJNLP185 = false
+//    skipSizeRecalculationForJNLP185 = false
+//    skipMacBundlerWorkaround = false
+//
+//    // gradle jfxRun
+//    runJavaParameter = null // String
+//    runAppParameter = null // String
+//
+//    // per default the outcome of the gradle "jarTask" will be used, set this to specify otherwise (like proguard-output)
+//    alternativePathToJarFile = null // String
+//
+//    // to disable patching of ant-javafx.jar, set this to false
+//    usePatchedJFXAntLib = true
+//
+//    // making it able to support absolute paths, defaults to "false" for maintaining old behaviour
+//    checkForAbsolutePaths = false
+//
+//    // gradle jfxGenerateKeyStore
+//    keyStore = "src/main/deploy/keystore.jks"
+//    keyStoreAlias = "myalias"
+//    keyStorePassword = "password"
+//    keyPassword = null // will default to keyStorePassword
+//    keyStoreType = "jks"
+//    overwriteKeyStore = false
+//
+//    certDomain = null // required
+//    certOrgUnit = null // defaults to "none"
+//    certOrg = null // required
+//    certState = null // required
+//    certCountry = null // required
 }
